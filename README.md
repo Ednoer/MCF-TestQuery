@@ -25,23 +25,6 @@
 ### 4. Tuliskan query untuk update data “Kode Motor” pada tabel “Pembayaran” menjadi “001” untuk semua Cabang Jakarta.
 
     UPDATE TabelPembayaran SET KodeMotor = '001' FROM TabelPembayaran INNER JOIN TabelCabang ON TabelPembayaran.KodeCabang = TabelCabang.KodeCabang WHERE TabelCabang.NamaCabang = 'Jakarta';
-
-### 5. Tuliskan query untuk menampilkan data berikut
-
-    SELECT 
-        TabelPembayaran.NoKontrak, 
-        TabelPembayaran.TglBayar, 
-        TabelPembayaran.JumlahBayar, 
-        TabelPembayaran.KodeCabang, 
-        TabelPembayaran.NoKwitansi, 
-        TabelPembayaran.KodeMotor, 
-        TabelMotor.NamaMotor
-    FROM 
-        TabelPembayaran
-    LEFT JOIN 
-        TabelMotor
-    ON 
-        TabelPembayaran.KodeMotor = TabelMotor.KodeMotor;
         
 ### 5. Tuliskan query untuk menampilkan data berikut
 ![No 5](https://i.ibb.co.com/nDnHXhm/Screenshot-2024-05-30-at-20-11-54.png)
@@ -80,7 +63,7 @@
 ### 7.  Tuliskan query untukmenampilkan data berikut.
 ![No 7](https://i.ibb.co.com/f8y12pT/Screenshot-2024-05-30-at-20-17-27.png)
 
-       SELECT 
+    SELECT 
         TabelCabang.KodeCabang, 
         TabelCabang.NamaCabang, 
         COUNT(TabelPembayaran.NoKontrak) AS TotalData, 
